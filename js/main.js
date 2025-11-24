@@ -6,7 +6,6 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initialize all components
     initNavigation();
     initSmoothScroll();
-    initGalleryFilter();
     initTestimonialSlider();
     initFAQAccordion();
     initContactForm();
@@ -87,36 +86,6 @@ function initSmoothScroll() {
                     behavior: 'smooth'
                 });
             }
-        });
-    });
-}
-
-/* ====================================
-   GALLERY FILTER
-   ==================================== */
-function initGalleryFilter() {
-    const filterBtns = document.querySelectorAll('.filter-btn');
-    const galleryItems = document.querySelectorAll('.gallery-item');
-
-    filterBtns.forEach(btn => {
-        btn.addEventListener('click', function() {
-            // Update active button
-            filterBtns.forEach(b => b.classList.remove('active'));
-            this.classList.add('active');
-
-            const filter = this.getAttribute('data-filter');
-
-            // Filter items
-            galleryItems.forEach(item => {
-                const category = item.getAttribute('data-category');
-
-                if (filter === 'all' || category === filter) {
-                    item.classList.remove('hidden');
-                    item.style.animation = 'fadeInUp 0.5s ease';
-                } else {
-                    item.classList.add('hidden');
-                }
-            });
         });
     });
 }
