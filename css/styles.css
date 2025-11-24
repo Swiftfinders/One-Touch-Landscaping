@@ -152,7 +152,7 @@ h4 { font-size: 1.25rem; }
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 20px;
+    padding: 10px 20px;
 }
 
 .logo {
@@ -161,7 +161,7 @@ h4 { font-size: 1.25rem; }
 }
 
 .logo img {
-    height: 45px;
+    height: 70px;
     width: auto;
     display: block;
     transition: var(--transition);
@@ -1177,15 +1177,15 @@ h4 { font-size: 1.25rem; }
     }
 
     .logo img {
-        height: 38px;
+        height: 58px;
     }
 
     .nav-menu {
         position: fixed;
-        top: 70px;
+        top: 90px;
         left: 0;
         width: 100%;
-        height: calc(100vh - 70px);
+        height: calc(100vh - 90px);
         background-color: var(--white);
         flex-direction: column;
         align-items: center;
